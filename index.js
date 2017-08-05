@@ -31,6 +31,8 @@ module.exports = function jsonBundler(opts) {
   }
 
   function bundleJson(cb) {
+    var self = this;
+
     Object.keys(contents).
         map(function(fileName) {
           var values = deepAssign({}, contents[master] || {}, contents[fileName]);
@@ -41,7 +43,7 @@ module.exports = function jsonBundler(opts) {
           });
         }).
         forEach(function(file) {
-          return this.push(file);
+          return self.push(file);
         });
 
     cb();
