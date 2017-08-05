@@ -17,13 +17,13 @@ module.exports = function jsonBundler(opts) {
   function gatherJson(chunc, enc, cb) {
     var localePath = path.relative(chunc.base, path.dirname(chunc.path)).replace(new RegExp(omit, 'g'), '');
 
-    // remove first and last slash
-    localePath = localePath.replace( /\\/g, '/' ); //change antislashes to slashes for Windows paths
-    localePath = localePath.replace(/^\/|\/$/g, '');
+    localePath = localePath.replace(/\\/g, '/'); // change antislashes to slashes for Windows paths
+    localePath = localePath.replace(/^\/|\/$/g, ''); // remove first and last slash
+
     var fileName = path.basename(chunc.path);
     var content = {};
-    objectPath.set(content, localePath.replace(/\//g, '.'), JSON.parse(chunc.contents));
 
+    objectPath.set(content, localePath.replace(/\//g, '.'), JSON.parse(chunc.contents));
     contents[fileName] = contents[fileName] || {};
     deepAssign(contents[fileName], content);
 
@@ -31,16 +31,20 @@ module.exports = function jsonBundler(opts) {
   }
 
   function bundleJson(cb) {
-    Object
-      .keys(contents)
-      .map(fileName => {
-        var values = deepAssign({}, contents[master] || {}, contents[fileName]);
-        return new File({
-          path: fileName,
-          contents: new Buffer(JSON.stringify(values))
+    Object.keys(contents).
+        map(function(fileName) {
+          var values = deepAssign({}, contents[master] || {}, contents[fileName]);
+
+          return new File({
+            path: fileName,
+            contents: new Buffer(JSON.stringify(values)),
+          });
+        }).
+        forEach(function(file) {
+          return this.push(file);
         });
-      })
-      .forEach(file => this.push(file));
+
     cb();
   }
+
 };
