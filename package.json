@@ -3,7 +3,7 @@
   "scripts": {
     "test": "mocha"
   },
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A simple gulp plugin to bundle json files together.",
   "keywords": [
     "gulp",
@@ -13,12 +13,12 @@
     "locales",
     "json"
   ],
-  "homepage": "https://github.com/wunderflats/gulp-json-bundler",
-  "bugs": "https://github.com/wunderflats/gulp-json-bundler/issues",
+  "homepage": "https://github.com/1oginov/gulp-json-bundler",
+  "bugs": "https://github.com/1oginov/gulp-json-bundler/issues",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/wunderflats/gulp-json-bundler.git"
+    "url": "https://github.com/1oginov/gulp-json-bundler.git"
   },
   "engines": {
     "node": ">=4.0.0"
