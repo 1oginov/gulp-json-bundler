@@ -24,9 +24,9 @@
     "node": ">=4.0.0"
   },
   "devDependencies": {
-    "chai": "^3.3.0",
+    "chai": "^4.1.1",
     "chai-things": "^0.2.0",
-    "mocha": "^2.3.3"
+    "mocha": "^3.5.0"
   },
   "dependencies": {
     "deep-assign": "^1.0.0",
