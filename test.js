@@ -1,13 +1,13 @@
 'use strict';
 
-var jsonBundler = require('.');
+var localesBundler = require('.');
 var File = require('vinyl');
 var chai = require('chai');
 var expect = chai.expect;
 
 chai.use(require('chai-things'));
 
-describe('jsonBundler', function() {
+describe('localesBundler', function() {
   var fixtures = [
     {
       contents: {some: 'textteil', another: 'textteil2'},
@@ -36,7 +36,7 @@ describe('jsonBundler', function() {
   it('bundles json files with the same name', function(done) {
     var files = [];
 
-    var jb = jsonBundler();
+    var jb = localesBundler();
 
     jb.on('data', function(file) {
       return files.push(file);
@@ -59,7 +59,7 @@ describe('jsonBundler', function() {
   it('merges the contents together', function(done) {
     var files = [];
 
-    var jb = jsonBundler();
+    var jb = localesBundler();
 
     jb.on('data', function(file) {
       return files.push(JSON.parse(file.contents.toString()));
@@ -90,7 +90,7 @@ describe('jsonBundler', function() {
   it('optionally inherits values from a master', function(done) {
     var files = [];
 
-    var jb = jsonBundler({master: 'de-de.json'});
+    var jb = localesBundler({master: 'de-de.json'});
 
     jb.on('data', function(file) {
       return files.push(JSON.parse(file.contents.toString()));
@@ -128,7 +128,7 @@ describe('jsonBundler', function() {
   it('optionally omits a directory name from the resulting object paths', function(done) {
     var files = [];
 
-    var jb = jsonBundler({omit: 'locales'});
+    var jb = localesBundler({omit: 'locales'});
 
     jb.on('data', function(file) {
       return files.push(JSON.parse(file.contents.toString()));

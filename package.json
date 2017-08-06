@@ -1,10 +1,10 @@
 {
-  "name": "gulp-json-bundler",
+  "name": "gulp-locales-bundler",
   "scripts": {
     "test": "mocha"
   },
   "version": "0.0.4",
-  "description": "A simple gulp plugin to bundle json files together.",
+  "description": "Gulp plugin to bundle locales JSON files",
   "keywords": [
     "gulp",
     "gulp-plugin",
@@ -13,12 +13,12 @@
     "locales",
     "json"
   ],
-  "homepage": "https://github.com/1oginov/gulp-json-bundler",
-  "bugs": "https://github.com/1oginov/gulp-json-bundler/issues",
+  "homepage": "https://github.com/1oginov/gulp-locales-bundler",
+  "bugs": "https://github.com/1oginov/gulp-locales-bundler/issues",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/1oginov/gulp-json-bundler.git"
+    "url": "https://github.com/1oginov/gulp-locales-bundler.git"
   },
   "engines": {
     "node": ">=4.0.0"
