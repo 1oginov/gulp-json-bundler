@@ -29,9 +29,9 @@
     "mocha": "^3.5.0"
   },
   "dependencies": {
-    "deep-assign": "^1.0.0",
-    "object-path": "^0.9.2",
-    "through2": "^2.0.0",
-    "vinyl": "^1.0.0"
+    "deep-assign": "^2.0.0",
+    "object-path": "^0.11.4",
+    "through2": "^2.0.3",
+    "vinyl": "^2.1.0"
   }
 }
