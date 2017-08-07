@@ -4,7 +4,7 @@
     "test": "mocha"
   },
   "version": "0.0.4",
-  "description": "Gulp plugin to bundle locales JSON files",
+  "description": "Gulp plugin to bundle JSON localization files",
   "keywords": [
     "gulp",
     "gulp-plugin",
