@@ -1,10 +1,10 @@
 {
-  "name": "gulp-json-bundler",
+  "name": "gulp-locales-bundler",
   "scripts": {
     "test": "mocha"
   },
-  "version": "0.0.4",
-  "description": "A simple gulp plugin to bundle json files together.",
+  "version": "0.0.5",
+  "description": "Gulp plugin to bundle JSON localization files",
   "keywords": [
     "gulp",
     "gulp-plugin",
@@ -13,25 +13,25 @@
     "locales",
     "json"
   ],
-  "homepage": "https://github.com/1oginov/gulp-json-bundler",
-  "bugs": "https://github.com/1oginov/gulp-json-bundler/issues",
+  "homepage": "https://github.com/1oginov/gulp-locales-bundler",
+  "bugs": "https://github.com/1oginov/gulp-locales-bundler/issues",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/1oginov/gulp-json-bundler.git"
+    "url": "https://github.com/1oginov/gulp-locales-bundler.git"
   },
   "engines": {
     "node": ">=4.0.0"
   },
   "devDependencies": {
-    "chai": "^3.3.0",
+    "chai": "^4.1.1",
     "chai-things": "^0.2.0",
-    "mocha": "^2.3.3"
+    "mocha": "^3.5.0"
   },
   "dependencies": {
-    "deep-assign": "^1.0.0",
-    "object-path": "^0.9.2",
-    "through2": "^2.0.0",
-    "vinyl": "^1.0.0"
+    "deep-assign": "^2.0.0",
+    "object-path": "^0.11.4",
+    "through2": "^2.0.3",
+    "vinyl": "^2.1.0"
   }
 }
