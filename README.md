@@ -4,59 +4,92 @@
 [![dependencies Status](https://david-dm.org/1oginov/gulp-locales-bundler/status.svg)](https://david-dm.org/1oginov/gulp-locales-bundler)
 [![devDependencies Status](https://david-dm.org/1oginov/gulp-locales-bundler/dev-status.svg)](https://david-dm.org/1oginov/gulp-locales-bundler?type=dev)
 
-json-bundler is a tool used internally at Wunderflats to merge JSON-files containing locale information together by name.
+Merges JSON files scattered here and there across your app. It is designed to **convert nested file structure into flat
+with files containing deep objects**. So all of the `*/locales/en.json` files will be compiled into one `en.json`
+keeping nested structure.
 
-## Installation
+It can be helpful if you want to have graceful translation files structure with respect to the **component approach**,
+but your app works with only one file containing all of the language-related stuff at once. As it
+[angular-translate](https://angular-translate.github.io/) does when uses
+[staticFilesLoader](https://angular-translate.github.io/docs/#/guide/12_asynchronous-loading).
 
-```
-npm i gulp-json-bundler
-```
+## Quick start
 
-## Use Case
+### Install
 
-Imagine having a React application. Each component will need to define strings for its user interface. If these components should be multilingual, you will need locale files.
-
-At Wunderflats, we use a directory layout that looks something like this:
-
-```
-src/
-  components/
-    component-1/
-      locales/
-        de-de.json
-        en-us.json
-      component-1.js
-      component-1.scss
-    component-2/
-      locales/
-        de-de.json
-        fr-fr.json
-      component-2.js
-      component-2.scss
-dist/
-  locales/
-    de-de.json
-    en-us.json
-    fr-fr.json
-  app.js
+```sh
+npm install gulp-locales-bundler --save-dev
 ```
 
-In our build process, we want to merge all language files for each language together. E.g. `component-1/locales/de-de.json` and `component-2/locales/de-de.json` will be merged into a single file `de-de.json`, with their contents available as properties derivered from the file path.
+### Use
 
-The content of `component-1/locales/de-de.json` will be available as the deep property `components.component-1` inside the bundle `de-de.json` file.
-
-## Example
-
-### gulpfile.js
+`gulpfile.js` example:
 
 ```javascript
+var gulp = require('gulp');
+var localesBundler = require('gulp-locales-bundler');
+
 gulp.task('locales', function() {
-  return gulp
-    .src('src/**/locales/**/*.json')
-    .pipe(jsonBundler({
-      omit: 'locales', // omits `locales` from the resulting json path
-      master: 'de-de.json' // inherit missing keys from `de-de.json`
-    }))
-    .pipe(gulp.dest('dist'));
+  var options = {
+    master: 'en.json', // copy missed translations from `en.json` files, default is ''
+    omit: 'locales',   // omits `locales` directory from the resulting objects, default is ''
+  };
+
+  return gulp.src('src/app/**/locales/**/*.json'). // get all JSON files from `locales` dir
+    pipe(localesBundler(options)).                 // bundle
+    pipe(gulp.dest('dist/locales/'));              // spit out
 });
 ```
+
+Of course, you can use any name for your JSON files, they will be bundled by filename.
+
+## Real life example
+
+Your application structure:
+
+```
+/src/app/
+|-- catalog
+|   |-- catalogItem
+|   |   |-- locales
+|   |   |   |-- en.json
+|   |   |   `-- ru.json
+|   |   `-- catalogItem.component.js
+|   |-- locales
+|   |   |-- en.json
+|   |   `-- ru.json
+|   `-- catalog.component.js
+`-- user
+    |-- locales
+    |   |-- de.json 
+    |   |-- en.json
+    |   `-- ru.json
+    `-- user.component.js
+```
+
+After using the above `gulpfile.js`:
+
+```
+/dist/locales/
+|-- de.json
+|-- en.json
+`-- ru.json
+```
+
+The `en.json` file will look like this:
+
+```json
+{
+  "catalog": {
+    "catalogItem": {
+      // contents of `/src/app/catalog/catalogItem/locales/en.json`
+    },
+    // contents of `/src/app/catalog/locales/en.json`
+  },
+  "user": {
+    // contents of `/src/app/user/locales/en.json`
+  }
+}
+```
+
+So you can access to the needed value using dot notation, `catalog.catalogItem.headline` for example.
