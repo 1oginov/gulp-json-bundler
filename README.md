@@ -1,10 +1,9 @@
 # gulp-locales-bundler
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/1oginov/gulp-locales-bundler.svg)](https://greenkeeper.io/)
-
 [![Build Status](https://travis-ci.org/1oginov/gulp-locales-bundler.svg?branch=master)](https://travis-ci.org/1oginov/gulp-locales-bundler)
 [![dependencies Status](https://david-dm.org/1oginov/gulp-locales-bundler/status.svg)](https://david-dm.org/1oginov/gulp-locales-bundler)
 [![devDependencies Status](https://david-dm.org/1oginov/gulp-locales-bundler/dev-status.svg)](https://david-dm.org/1oginov/gulp-locales-bundler?type=dev)
+[![Greenkeeper badge](https://badges.greenkeeper.io/1oginov/gulp-locales-bundler.svg)](https://greenkeeper.io/)
 
 json-bundler is a tool used internally at Wunderflats to merge JSON-files containing locale information together by name.
 
