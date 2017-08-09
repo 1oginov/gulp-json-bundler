@@ -1,25 +1,26 @@
 {
   "name": "gulp-locales-bundler",
-  "scripts": {
-    "test": "mocha"
-  },
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "Gulp plugin to bundle JSON localization files",
   "keywords": [
     "gulp",
     "gulp-plugin",
+    "locales",
+    "json",
+    "bundler",
+    "angular-translate",
     "internationalization",
     "i18n",
-    "locales",
-    "json"
+    "localization",
+    "l10n"
   ],
   "homepage": "https://github.com/1oginov/gulp-locales-bundler",
   "bugs": "https://github.com/1oginov/gulp-locales-bundler/issues",
-  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/1oginov/gulp-locales-bundler.git"
   },
+  "license": "MIT",
   "engines": {
     "node": ">=4.0.0"
   },
@@ -33,5 +34,8 @@
     "object-path": "^0.11.4",
     "through2": "^2.0.3",
     "vinyl": "^2.1.0"
+  },
+  "scripts": {
+    "test": "mocha"
   }
 }
