@@ -79,7 +79,7 @@ After using the above `gulpfile.js`:
 
 The `en.json` file will look like this:
 
-```json
+```
 {
   "catalog": {
     "catalogItem": {
@@ -93,4 +93,4 @@ The `en.json` file will look like this:
 }
 ```
 
-So you can access to the needed value using dot notation, `catalog.catalogItem.headline` for example.
+So you can get needed value using dot notation, `catalog.catalogItem.headline` for example.
