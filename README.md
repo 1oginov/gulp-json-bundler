@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/1oginov/gulp-locales-bundler.svg?branch=master)](https://travis-ci.org/1oginov/gulp-locales-bundler)
 [![dependencies Status](https://david-dm.org/1oginov/gulp-locales-bundler/status.svg)](https://david-dm.org/1oginov/gulp-locales-bundler)
 [![devDependencies Status](https://david-dm.org/1oginov/gulp-locales-bundler/dev-status.svg)](https://david-dm.org/1oginov/gulp-locales-bundler?type=dev)
+[![Greenkeeper badge](https://badges.greenkeeper.io/1oginov/gulp-locales-bundler.svg)](https://greenkeeper.io/)
 
 Merges JSON files scattered here and there across your app. It is designed to **convert nested file structure into flat
 with files containing deep objects**. So all of the `*/locales/en.json` files will be compiled into one `en.json`
