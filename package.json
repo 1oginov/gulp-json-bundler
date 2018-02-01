@@ -2,9 +2,9 @@
   "name": "gulp-locales-bundler",
   "version": "0.1.1",
   "description": "Gulp plugin to bundle JSON localization files",
-  "main": "./index.js",
+  "main": "./src/GulpLocalesBundler.js",
   "scripts": {
-    "lint": "eslint ./index.js ./test.js",
+    "lint": "eslint ./src/ ./test/",
     "test": "mocha"
   },
   "repository": {

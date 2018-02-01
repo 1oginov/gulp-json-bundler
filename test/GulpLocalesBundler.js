@@ -1,6 +1,6 @@
 'use strict';
 
-var localesBundler = require('.');
+var localesBundler = require('../src/GulpLocalesBundler');
 var File = require('vinyl');
 var chai = require('chai');
 var expect = chai.expect;
