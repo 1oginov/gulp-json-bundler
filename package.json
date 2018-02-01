@@ -27,7 +27,7 @@
   "devDependencies": {
     "chai": "^4.1.1",
     "chai-things": "^0.2.0",
-    "mocha": "^4.0.0"
+    "mocha": "^5.0.0"
   },
   "dependencies": {
     "deep-assign": "^2.0.0",
