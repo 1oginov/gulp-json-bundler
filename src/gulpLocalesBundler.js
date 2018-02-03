@@ -1,3 +1,5 @@
+'use strict';
+
 const deepAssign = require('deep-assign');
 const objectPath = require('object-path');
 const path = require('path');
@@ -9,7 +11,7 @@ const Vinyl = require('vinyl');
  * @param {Object} [options={}]
  * @return {*}
  */
-const GulpLocalesBundler = (options = {}) => {
+const gulpLocalesBundler = (options = {}) => {
   const master = options.master || '';
   const omit = options.omit || '';
 
@@ -57,4 +59,4 @@ const GulpLocalesBundler = (options = {}) => {
       });
 };
 
-module.exports = GulpLocalesBundler;
+module.exports = gulpLocalesBundler;
