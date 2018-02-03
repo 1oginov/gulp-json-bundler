@@ -59,6 +59,5 @@ typings/
 
 # Intellij IDEA
 .idea/dictionaries/
-.idea/libraries/
 .idea/**/tasks.xml
 .idea/**/workspace.xml
