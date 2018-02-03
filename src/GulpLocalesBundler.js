@@ -1,52 +1,60 @@
-'use strict';
+const deepAssign = require('deep-assign');
+const objectPath = require('object-path');
+const path = require('path');
+const through2 = require('through2');
+const Vinyl = require('vinyl');
 
-var through = require('through2');
-var objectPath = require('object-path');
-var File = require('vinyl');
-var deepAssign = require('deep-assign');
-var path = require('path');
+/**
+ * Gulp Locales Bundler.
+ * @param {Object} [options={}]
+ * @return {*}
+ */
+const GulpLocalesBundler = (options = {}) => {
+  const master = options.master || '';
+  const omit = options.omit || '';
 
-module.exports = function jsonBundler(opts) {
-  opts = opts || {};
-  var master = opts.master || '';
-  var omit = opts.omit || '';
-  var contents = {};
+  const contents = {};
 
-  return through.obj(gatherJson, bundleJson);
+  return through2.obj(
+      // Transform function.
+      function(chunk, encoding, callback) {
+        let localePath = path.relative(chunk.base, path.dirname(chunk.path)).
+            replace(new RegExp(omit, 'g'), '');
 
-  function gatherJson(chunc, enc, cb) {
-    var localePath = path.relative(chunc.base, path.dirname(chunc.path)).replace(new RegExp(omit, 'g'), '');
+        // Replace backslashes with slashes for Windows paths.
+        localePath = localePath.replace(/\\/g, '/');
+        // Remove first and last slashes.
+        localePath = localePath.replace(/^\/|\/$/g, '');
 
-    localePath = localePath.replace(/\\/g, '/'); // change antislashes to slashes for Windows paths
-    localePath = localePath.replace(/^\/|\/$/g, ''); // remove first and last slash
+        const fileName = path.basename(chunk.path);
+        const content = {};
 
-    var fileName = path.basename(chunc.path);
-    var content = {};
+        objectPath.set(content, localePath.replace(/\//g, '.'),
+            JSON.parse(chunk.contents));
 
-    objectPath.set(content, localePath.replace(/\//g, '.'), JSON.parse(chunc.contents));
-    contents[fileName] = contents[fileName] || {};
-    deepAssign(contents[fileName], content);
+        contents[fileName] = contents[fileName] || {};
+        deepAssign(contents[fileName], content);
 
-    cb();
-  }
+        callback();
+      },
+      // Flush function.
+      function(callback) {
+        Object.keys(contents).
+            map((fileName) => {
+              const values = deepAssign({}, contents[master] || {},
+                  contents[fileName]);
 
-  function bundleJson(cb) {
-    var self = this;
+              return new Vinyl({
+                contents: new Buffer(JSON.stringify(values)),
+                path: fileName,
+              });
+            }).
+            forEach((file) => {
+              return this.push(file); // eslint-disable-line no-invalid-this
+            });
 
-    Object.keys(contents).
-        map(function(fileName) {
-          var values = deepAssign({}, contents[master] || {}, contents[fileName]);
-
-          return new File({
-            path: fileName,
-            contents: new Buffer(JSON.stringify(values)),
-          });
-        }).
-        forEach(function(file) {
-          return self.push(file);
-        });
-
-    cb();
-  }
-
+        callback();
+      });
 };
+
+module.exports = GulpLocalesBundler;
