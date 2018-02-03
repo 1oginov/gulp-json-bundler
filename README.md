@@ -1,17 +1,18 @@
 # gulp-locales-bundler
 
 [![Build Status](https://travis-ci.org/1oginov/gulp-locales-bundler.svg?branch=master)](https://travis-ci.org/1oginov/gulp-locales-bundler)
+[![Coverage Status](https://coveralls.io/repos/github/1oginov/gulp-locales-bundler/badge.svg?branch=master)](https://coveralls.io/github/1oginov/gulp-locales-bundler?branch=master)
 [![dependencies Status](https://david-dm.org/1oginov/gulp-locales-bundler/status.svg)](https://david-dm.org/1oginov/gulp-locales-bundler)
 [![devDependencies Status](https://david-dm.org/1oginov/gulp-locales-bundler/dev-status.svg)](https://david-dm.org/1oginov/gulp-locales-bundler?type=dev)
 [![Greenkeeper badge](https://badges.greenkeeper.io/1oginov/gulp-locales-bundler.svg)](https://greenkeeper.io/)
 
 Merges JSON files scattered here and there across your app. It is designed to **convert nested file structure into flat
-with files containing deep objects**. So all of the `*/locales/en.json` files will be compiled into one `en.json`
+with files containing deep objects**. So all of the `*/locales/en.json` files will be compiled into the one `en.json`
 keeping nested structure.
 
 It can be helpful if you want to have graceful translation files structure with respect to the **component approach**,
-but your app works with only one file containing all of the language-related stuff at once. As it
-[angular-translate](https://angular-translate.github.io/) does when uses
+but your app works with only one file containing all of the language-related stuff at once. For example, as
+[angular-translate](https://angular-translate.github.io) does it when uses
 [staticFilesLoader](https://angular-translate.github.io/docs/#/guide/12_asynchronous-loading).
 
 ## Quick start
@@ -19,30 +20,30 @@ but your app works with only one file containing all of the language-related stu
 ### Install
 
 ```sh
-npm install gulp-locales-bundler --save-dev
+npm install --save-dev gulp-locales-bundler
 ```
 
 ### Use
 
 `gulpfile.js` example:
 
-```javascript
-var gulp = require('gulp');
-var localesBundler = require('gulp-locales-bundler');
+```js
+const gulp = require('gulp');
+const gulpLocalesBundler = require('gulp-locales-bundler');
 
-gulp.task('locales', function() {
-  var options = {
-    master: 'en.json', // copy missed translations from `en.json` files, default is ''
-    omit: 'locales',   // omits `locales` directory from the resulting objects, default is ''
+gulp.task('locales', () => {
+  const options = {
+    master: 'en.json', // Copy missed translations from `en.json` files, default is ''.
+    omit: 'locales',   // Omit `locales` directory from the resulting objects, default is ''.
   };
 
-  return gulp.src('src/app/**/locales/**/*.json'). // get all JSON files from `locales` dir
-    pipe(localesBundler(options)).                 // bundle
-    pipe(gulp.dest('dist/locales/'));              // spit out
+  return gulp.src('src/app/**/locales/**/*.json'). // Get all JSON files from `locales` dir.
+    pipe(gulpLocalesBundler(options)).             // Bundle.
+    pipe(gulp.dest('dist/locales'));              // Spit out.
 });
 ```
 
-Of course, you can use any name for your JSON files, they will be bundled by filename.
+Of course, you can use any name for your JSON files, they will be merged using filename.
 
 ## Real life example
 
@@ -93,4 +94,8 @@ The `en.json` file will look like this:
 }
 ```
 
-So you can get needed value using dot notation, `catalog.catalogItem.headline` for example.
+So you can obtain values using dot notation, `catalog.catalogItem.headline` for example.
+
+## Contribution
+
+If you want to contribute, please use the [dev](https://github.com/1oginov/gulp-locales-bundler/tree/dev) branch.

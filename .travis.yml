@@ -2,9 +2,10 @@ language: node_js
 node_js:
   - "node"
 before_install:
-  - npm install -g npm@5
   - npm install -g greenkeeper-lockfile@1
 before_script:
   - greenkeeper-lockfile-update
+after_success:
+  - npm run coveralls
 after_script:
   - greenkeeper-lockfile-upload
