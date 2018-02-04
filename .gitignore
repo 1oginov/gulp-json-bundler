@@ -57,7 +57,7 @@ typings/
 # dotenv environment variables file
 .env
 
-# Intellij IDEA
+# IntelliJ IDEA
 .idea/dictionaries/
 .idea/**/tasks.xml
 .idea/**/workspace.xml
