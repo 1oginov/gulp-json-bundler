@@ -31,7 +31,7 @@ npm install --save-dev gulp-locales-bundler
 const gulp = require('gulp');
 const gulpLocalesBundler = require('gulp-locales-bundler');
 
-gulp.task('locales', () => {
+gulp.task('locales', function() {
   const options = {
     master: 'en.json', // Copy missed translations from `en.json` files, default is ''.
     omit: 'locales',   // Omit `locales` directory from the resulting objects, default is ''.
@@ -39,11 +39,11 @@ gulp.task('locales', () => {
 
   return gulp.src('src/app/**/locales/**/*.json'). // Get all JSON files from `locales` dir.
     pipe(gulpLocalesBundler(options)).             // Bundle.
-    pipe(gulp.dest('dist/locales'));              // Spit out.
+    pipe(gulp.dest('dist/locales'));               // Spit out.
 });
 ```
 
-Of course, you can use any name for your JSON files, they will be merged using filename.
+Of course, you can use any names for your JSON files.
 
 ## Real life example
 
