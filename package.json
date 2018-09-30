@@ -1,6 +1,6 @@
 {
   "name": "gulp-locales-bundler",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Gulp plugin to bundle JSON localization files",
   "main": "./src/gulpLocalesBundler.js",
   "scripts": {
@@ -37,11 +37,11 @@
     "vinyl": "^2.2.0"
   },
   "devDependencies": {
-    "chai": "^4.1.2",
+    "chai": "^4.2.0",
     "chai-things": "^0.2.0",
     "coveralls": "^3.0.2",
-    "eslint": "^5.3.0",
-    "eslint-config-google": "^0.9.1",
+    "eslint": "^5.6.1",
+    "eslint-config-google": "^0.10.0",
     "istanbul": "^0.4.5",
     "mocha": "^5.2.0"
   }
