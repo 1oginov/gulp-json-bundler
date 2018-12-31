@@ -1,6 +1,6 @@
 {
   "name": "gulp-locales-bundler",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Gulp plugin to bundle JSON localization files",
   "main": "./src/gulpLocalesBundler.js",
   "scripts": {
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/1oginov/gulp-locales-bundler.git"
+    "url": "git+https://github.com/loginov-rocks/gulp-locales-bundler.git"
   },
   "keywords": [
     "angular-translate",
@@ -27,9 +27,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/1oginov/gulp-locales-bundler/issues"
+    "url": "https://github.com/loginov-rocks/gulp-locales-bundler/issues"
   },
-  "homepage": "https://github.com/1oginov/gulp-locales-bundler",
+  "homepage": "https://github.com/loginov-rocks/gulp-locales-bundler",
   "dependencies": {
     "deep-assign": "^3.0.0",
     "object-path": "^0.11.4",
@@ -40,7 +40,7 @@
     "chai": "^4.2.0",
     "chai-things": "^0.2.0",
     "coveralls": "^3.0.2",
-    "eslint": "^5.6.1",
+    "eslint": "^5.11.1",
     "eslint-config-google": "^0.11.0",
     "istanbul": "^0.4.5",
     "mocha": "^5.2.0"
