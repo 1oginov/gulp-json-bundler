@@ -1,10 +1,11 @@
 # gulp-locales-bundler
 
-[![Build Status](https://travis-ci.org/1oginov/gulp-locales-bundler.svg?branch=master)](https://travis-ci.org/1oginov/gulp-locales-bundler)
-[![Coverage Status](https://coveralls.io/repos/github/1oginov/gulp-locales-bundler/badge.svg?branch=master)](https://coveralls.io/github/1oginov/gulp-locales-bundler?branch=master)
-[![dependencies Status](https://david-dm.org/1oginov/gulp-locales-bundler/status.svg)](https://david-dm.org/1oginov/gulp-locales-bundler)
-[![devDependencies Status](https://david-dm.org/1oginov/gulp-locales-bundler/dev-status.svg)](https://david-dm.org/1oginov/gulp-locales-bundler?type=dev)
-[![Greenkeeper badge](https://badges.greenkeeper.io/1oginov/gulp-locales-bundler.svg)](https://greenkeeper.io/)
+[![NpmVersion](https://img.shields.io/npm/v/gulp-locales-bundler.svg)](https://www.npmjs.com/package/gulp-locales-bundler)
+[![Build Status](https://travis-ci.org/loginov-rocks/gulp-locales-bundler.svg?branch=master)](https://travis-ci.org/loginov-rocks/gulp-locales-bundler)
+[![Coverage Status](https://coveralls.io/repos/github/loginov-rocks/gulp-locales-bundler/badge.svg?branch=master)](https://coveralls.io/github/loginov-rocks/gulp-locales-bundler?branch=master)
+[![dependencies Status](https://david-dm.org/loginov-rocks/gulp-locales-bundler/status.svg)](https://david-dm.org/loginov-rocks/gulp-locales-bundler)
+[![devDependencies Status](https://david-dm.org/loginov-rocks/gulp-locales-bundler/dev-status.svg)](https://david-dm.org/loginov-rocks/gulp-locales-bundler?type=dev)
+[![Greenkeeper badge](https://badges.greenkeeper.io/loginov-rocks/gulp-locales-bundler.svg)](https://greenkeeper.io/)
 
 Merges JSON files scattered here and there across your app. It is designed to **convert nested file structure into flat
 with files containing deep objects**. So all of the `*/locales/en.json` files will be compiled into the one `en.json`
@@ -98,4 +99,4 @@ So you can obtain values using dot notation, `catalog.catalogItem.headline` for 
 
 ## Contribution
 
-If you want to contribute, please use the [dev](https://github.com/1oginov/gulp-locales-bundler/tree/dev) branch.
+If you want to contribute, please use the [dev](https://github.com/loginov-rocks/gulp-locales-bundler/tree/dev) branch.
