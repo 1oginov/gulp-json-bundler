@@ -1,8 +1,8 @@
 {
   "name": "gulp-locales-bundler",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Gulp plugin to bundle JSON localization files",
-  "main": "./src/gulpLocalesBundler.js",
+  "main": "src/gulpLocalesBundler.js",
   "scripts": {
     "cover": "istanbul cover ./node_modules/mocha/bin/_mocha",
     "coveralls": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
@@ -33,14 +33,14 @@
   "dependencies": {
     "deep-assign": "^3.0.0",
     "object-path": "^0.11.4",
-    "through2": "^3.0.0",
+    "through2": "^3.0.1",
     "vinyl": "^2.2.0"
   },
   "devDependencies": {
     "chai": "^4.2.0",
     "chai-things": "^0.2.0",
     "coveralls": "^3.0.3",
-    "eslint": "^5.14.1",
+    "eslint": "^5.16.0",
     "eslint-config-google": "^0.12.0",
     "istanbul": "^0.4.5",
     "mocha": "^6.0.2"
