@@ -8,8 +8,9 @@ const Vinyl = require('vinyl');
 
 /**
  * Gulp Locales Bundler.
- * @param {Object} [options={}]
- * @return {*}
+ *
+ * @param {object} [options={}] - Options.
+ * @returns {*} Through2 object.
  */
 const gulpLocalesBundler = (options = {}) => {
   const master = options.master || '';

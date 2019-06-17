@@ -1,7 +1,7 @@
 # gulp-locales-bundler
 
 [![NpmVersion](https://img.shields.io/npm/v/gulp-locales-bundler.svg)](https://www.npmjs.com/package/gulp-locales-bundler)
-[![Build Status](https://travis-ci.org/loginov-rocks/gulp-locales-bundler.svg?branch=master)](https://travis-ci.org/loginov-rocks/gulp-locales-bundler)
+[![Build Status](https://travis-ci.com/loginov-rocks/gulp-locales-bundler.svg?branch=master)](https://travis-ci.com/loginov-rocks/gulp-locales-bundler)
 [![Coverage Status](https://coveralls.io/repos/github/loginov-rocks/gulp-locales-bundler/badge.svg?branch=master)](https://coveralls.io/github/loginov-rocks/gulp-locales-bundler?branch=master)
 [![dependencies Status](https://david-dm.org/loginov-rocks/gulp-locales-bundler/status.svg)](https://david-dm.org/loginov-rocks/gulp-locales-bundler)
 [![devDependencies Status](https://david-dm.org/loginov-rocks/gulp-locales-bundler/dev-status.svg)](https://david-dm.org/loginov-rocks/gulp-locales-bundler?type=dev)
