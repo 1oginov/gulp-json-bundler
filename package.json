@@ -42,7 +42,7 @@
     "chai": "^4.2.0",
     "chai-things": "^0.2.0",
     "coveralls": "^3.0.4",
-    "eslint": "^5.16.0",
+    "eslint": "^6.0.0",
     "eslint-config-google": "^0.13.0",
     "eslint-plugin-jsdoc": "^8.1.0",
     "istanbul": "^0.4.5",
