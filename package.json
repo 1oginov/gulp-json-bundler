@@ -44,7 +44,7 @@
     "coveralls": "^3.0.4",
     "eslint": "^6.0.0",
     "eslint-config-google": "^0.13.0",
-    "eslint-plugin-jsdoc": "^8.1.0",
+    "eslint-plugin-jsdoc": "^9.0.0",
     "istanbul": "^0.4.5",
     "mocha": "^6.1.4"
   }
