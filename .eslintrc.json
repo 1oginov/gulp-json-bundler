@@ -35,7 +35,16 @@
     "max-len": [
       "error",
       {
-        "code": 120
+        "code": 120,
+        "ignoreTemplateLiterals": true
+      }
+    ],
+    "sort-keys": [
+      "error",
+      "asc",
+      {
+        "caseSensitive": false,
+        "natural": true
       }
     ],
     "valid-jsdoc": "off"

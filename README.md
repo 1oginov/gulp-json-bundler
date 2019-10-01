@@ -96,7 +96,3 @@ The `en.json` file will look like this:
 ```
 
 So you can obtain values using dot notation, `catalog.catalogItem.headline` for example.
-
-## Contribution
-
-If you want to contribute, please use the [dev](https://github.com/loginov-rocks/gulp-locales-bundler/tree/dev) branch.
