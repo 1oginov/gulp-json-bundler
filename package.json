@@ -1,12 +1,9 @@
 {
   "name": "gulp-locales-bundler",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Gulp plugin to bundle JSON localization files",
   "main": "src/gulpLocalesBundler.js",
   "scripts": {
-    "check": "npm run lint && npm test",
-    "clean:coverage": "rimraf coverage",
-    "coveralls": "npm run clean:coverage && npm run test:coverage -- --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "lint": "eslint src test",
     "test": "mocha",
     "test:coverage": "istanbul cover ./node_modules/mocha/bin/_mocha"
@@ -34,19 +31,17 @@
   "homepage": "https://github.com/loginov-rocks/gulp-locales-bundler",
   "dependencies": {
     "deep-assign": "^3.0.0",
-    "object-path": "^0.11.4",
-    "through2": "^3.0.1",
-    "vinyl": "^2.2.0"
+    "object-path": "^0.11.5",
+    "through2": "^4.0.2",
+    "vinyl": "^2.2.1"
   },
   "devDependencies": {
     "chai": "^4.2.0",
     "chai-things": "^0.2.0",
-    "coveralls": "^3.0.6",
-    "eslint": "^6.5.1",
+    "eslint": "^7.17.0",
     "eslint-config-google": "^0.14.0",
-    "eslint-plugin-jsdoc": "^22.0.0",
+    "eslint-plugin-jsdoc": "^30.7.13",
     "istanbul": "^0.4.5",
-    "mocha": "^7.0.1",
-    "rimraf": "^3.0.0"
+    "mocha": "^8.2.1"
   }
 }

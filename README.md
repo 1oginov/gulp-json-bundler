@@ -1,11 +1,8 @@
 # gulp-locales-bundler
 
-[![NpmVersion](https://img.shields.io/npm/v/gulp-locales-bundler.svg)](https://www.npmjs.com/package/gulp-locales-bundler)
-[![Build Status](https://travis-ci.com/loginov-rocks/gulp-locales-bundler.svg?branch=master)](https://travis-ci.com/loginov-rocks/gulp-locales-bundler)
-[![Coverage Status](https://coveralls.io/repos/github/loginov-rocks/gulp-locales-bundler/badge.svg?branch=master)](https://coveralls.io/github/loginov-rocks/gulp-locales-bundler?branch=master)
-[![dependencies Status](https://david-dm.org/loginov-rocks/gulp-locales-bundler/status.svg)](https://david-dm.org/loginov-rocks/gulp-locales-bundler)
-[![devDependencies Status](https://david-dm.org/loginov-rocks/gulp-locales-bundler/dev-status.svg)](https://david-dm.org/loginov-rocks/gulp-locales-bundler?type=dev)
-[![Greenkeeper badge](https://badges.greenkeeper.io/loginov-rocks/gulp-locales-bundler.svg)](https://greenkeeper.io/)
+[![npm](https://img.shields.io/npm/v/gulp-locales-bundler)](https://www.npmjs.com/package/gulp-locales-bundler)
+[![CI](https://github.com/loginov-rocks/gulp-locales-bundler/workflows/CI/badge.svg)](https://github.com/loginov-rocks/gulp-locales-bundler/actions)
+[![Coverage Status](https://coveralls.io/repos/github/loginov-rocks/gulp-locales-bundler/badge.svg?branch=main)](https://coveralls.io/github/loginov-rocks/gulp-locales-bundler?branch=main)
 
 Merges JSON files scattered here and there across your app. It is designed to **convert nested file structure into flat
 with files containing deep objects**. So all of the `*/locales/en.json` files will be compiled into the one `en.json`
@@ -16,7 +13,7 @@ but your app works with only one file containing all of the language-related stu
 [angular-translate](https://angular-translate.github.io) does it when uses
 [staticFilesLoader](https://angular-translate.github.io/docs/#/guide/12_asynchronous-loading).
 
-## Quick start
+## Quick Start
 
 ### Install
 
@@ -46,7 +43,7 @@ gulp.task('locales', function() {
 
 Of course, you can use any names for your JSON files.
 
-## Real life example
+## Real Life Example
 
 Your application structure:
 
