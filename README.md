@@ -1,7 +1,8 @@
 # gulp-locales-bundler
 
 [![npm](https://img.shields.io/npm/v/gulp-locales-bundler)](https://www.npmjs.com/package/gulp-locales-bundler)
-[![CI](https://github.com/loginov-rocks/gulp-locales-bundler/workflows/CI/badge.svg)](https://github.com/loginov-rocks/gulp-locales-bundler/actions)
+[![CI](https://github.com/loginov-rocks/gulp-locales-bundler/actions/workflows/ci.yml/badge.svg)](https://github.com/loginov-rocks/gulp-locales-bundler/actions/workflows/ci.yml)
+[![CD](https://github.com/loginov-rocks/gulp-locales-bundler/actions/workflows/cd.yml/badge.svg)](https://github.com/loginov-rocks/gulp-locales-bundler/actions/workflows/cd.yml)
 [![Coverage Status](https://coveralls.io/repos/github/loginov-rocks/gulp-locales-bundler/badge.svg?branch=main)](https://coveralls.io/github/loginov-rocks/gulp-locales-bundler?branch=main)
 
 Merges JSON files scattered here and there across your app. It is designed to **convert nested file structure into flat
